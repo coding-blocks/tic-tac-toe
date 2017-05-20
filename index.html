@@ -28,8 +28,8 @@
         <div class="module left">
           <ul class="menu">
             <li>
-              <button class="btn btn-filled btn-sm hoverlight" onclick="runcode()">
-                  Run Code
+              <button id="start" class="btn btn-filled btn-sm hoverlight" onclick="runcode()">
+                  Start
               </button>
             </li>
             <li>
@@ -114,6 +114,20 @@
     </div>
   </div>
 
+  <div id="options" class="modal animated fadeIn">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Options</h2>
+      </div>
+      <div class="modal-body">
+        <p class="modal_text"></p>
+        <btn id="setOptionRandom" class="btn btn-filled btn-sm hoverlight">Random</btn>
+        <btn id="setOptionChal" class="btn btn-filled btn-sm hoverlight">Challenge</btn>
+      </div>
+    </div>
+  </div>
+
   <script>
     var grid = new Array(3);
     grid[0] = new Array(3);
@@ -121,12 +135,21 @@
     grid[2] = new Array(3);
     var player = 1;
     var gameWon = 0;
+    var firstplay = 1;
+    var GameMode=0;
     function runcode() {
       var extra =
         `
         var modal = document.getElementById('myModal');
-
+        var opt = document.getElementById('options');
         function play(row, col) {
+          if(firstplay==1)
+          {
+            firstplay=0;
+            $("#start").html("Run Code");
+            $("#options").css("display", "block");
+          }
+          else{
           if (checkLegalMove(row, col) == true) {
             if (player == 1) {
               turn(row, col);
@@ -142,6 +165,7 @@
               player = 1;
             }
           }
+        }
         }
 
         function turn(row, col) {
@@ -310,6 +334,16 @@
           }
         }
 
+
+        $("#setOptionRandom").click(function() {
+          gameMode=0;
+          opt.style.display = "none";
+        });
+        $("#setOptionChal").click(function() {
+          gameMode=1;
+          opt.style.display = "none";
+        });
+
         $("#restartBtn").click(function() {
           grid = new Array(3);
           grid[0] = new Array(3);
@@ -317,6 +351,8 @@
           grid[2] = new Array(3);
           player = 1;
           gameWon = 0;
+          firstplay = 1;
+          $("#start").html("Start");
           $("#square_one_text").html("");
           $("#square_two_text").html("");
           $("#square_three_text").html("");
