@@ -101,19 +101,6 @@
     editor.getSession().setMode("ace/mode/javascript");
   </script>
 
-  <div id="myModal" class="modal animated fadeIn">
-    <!-- Modal content -->
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2>Game Over</h2>
-      </div>
-      <div class="modal-body">
-        <p class="modal_text"></p>
-        <btn id="restartBtn" class="btn btn-filled btn-sm hoverlight">Play again?</btn>
-      </div>
-    </div>
-  </div>
-
   <div id="options" class="modal animated fadeIn">
     <!-- Modal content -->
     <div class="modal-content">
@@ -128,6 +115,19 @@
     </div>
   </div>
 
+  <div id="myModal" class="modal animated fadeIn">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Game Over</h2>
+      </div>
+      <div class="modal-body">
+        <p class="modal_text"></p>
+        <btn id="playAgainBtn" class="btn btn-filled btn-sm hoverlight">Play again?</btn>
+      </div>
+    </div>
+  </div>
+
   <script>
     var grid = new Array(3);
     grid[0] = new Array(3);
@@ -137,11 +137,12 @@
     var gameWon = 0;
     var firstplay = 1;
     var GameMode=0;
+    var mod = document.getElementById('myModal');
+    var opt = document.getElementById('options');
     function runcode() {
       var extra =
         `
-        var modal = document.getElementById('myModal');
-        var opt = document.getElementById('options');
+
         function play(row, col) {
           if(firstplay==1)
           {
@@ -362,7 +363,27 @@
           $("#square_seven_text").html("");
           $("#square_eight_text").html("");
           $("#square_nine_text").html("");
-          modal.style.display = "none";
+        });
+
+        $("#playAgainBtn").click(function() {
+          grid = new Array(3);
+          grid[0] = new Array(3);
+          grid[1] = new Array(3);
+          grid[2] = new Array(3);
+          player = 1;
+          gameWon = 0;
+          firstplay = 1;
+          $("#start").html("Start");
+          $("#square_one_text").html("");
+          $("#square_two_text").html("");
+          $("#square_three_text").html("");
+          $("#square_four_text").html("");
+          $("#square_five_text").html("");
+          $("#square_six_text").html("");
+          $("#square_seven_text").html("");
+          $("#square_eight_text").html("");
+          $("#square_nine_text").html("");
+          mod.style.display = \"none\";
         });
         `;
 
