@@ -88,7 +88,6 @@ function chalDefend(char) {
     }
 
     var diagSum = grid[0][0] + grid[1][1] + grid[2][2];
-    console.log('digitSum:'+diagSum);
     if (diagSum == winString)
         for (i = 0; i < 3; i++)
             if (grid[i][i] == "") {
