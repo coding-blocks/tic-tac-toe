@@ -67,6 +67,8 @@ function checkWin() {
             multiEndGame(0);
         else if (GameMode == 1)
             randomEndGame(0);
+        else
+            chalEndGame(0);
     }
     return false;
 }

@@ -88,24 +88,21 @@ function chalDefend(char) {
     }
 
     var diagSum = grid[0][0] + grid[1][1] + grid[2][2];
-    for (var i = 0; i < 3; i++)
-        diagSum += grid[i][i];
-    if (diagSum == winString) {
-        for (i = 0; j < 3; j++)
+    console.log('digitSum:'+diagSum);
+    if (diagSum == winString)
+        for (i = 0; i < 3; i++)
             if (grid[i][i] == "") {
                 playTurn(i, i);
                 return 1;
             }
-    }
 
     diagSum = grid[0][2] + grid[1][1] + grid[2][0];
-    if (diagSum == winString) {
-        for (i = 0; j < 3; j++)
+    if (diagSum == winString)
+        for (i = 0; i < 3; i++)
             if (grid[i][2 - i] == "") {
                 playTurn(i, 2 - i);
                 return 1;
             }
-    }
     return 0;
 }
 
