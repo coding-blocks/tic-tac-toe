@@ -33,24 +33,35 @@ td:hover {
   opacity: 0.4;
 }
 
+.controls{
+  text-align: center;
+  display: block;
+  margin-bottom: 30px;
+}
+
 .content {
-  position: absolute;
-  display: inline;
-  top: 70%;
-  transform: translateY(-70%);
+  position: relative;
+  display: block;
   width: 90%;
   margin-left: 5%;
   margin-right: 5%;
 }
 
+@media (max-width:767px){
+  .content{
+    top:0px;
+    width: 100%;
+    position: relative;
+    transform: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0px;
+  }
+
+}
 .leftbox{
   width: 50%;
   padding: 0px calc((66.66% - 400px)/4);
-}
-
-.rightbox{
-  width: 40%;
-  margin-left: 10%;
 }
 
 table {
@@ -117,6 +128,7 @@ table {
 
 #editor {
     height: 400px;
+    width: 400px!important;
 }
 
 body {
