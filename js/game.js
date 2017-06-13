@@ -109,7 +109,7 @@ $("#setOptionChal").click(function () {
     $("#playerTurn").css("display", "block");
 });
 
-$("#endBtn").click(function () {
+$(".endBtn").click(function () {
 
     initializeGrid();
     player = 1;
@@ -129,6 +129,7 @@ $("#endBtn").click(function () {
     $("#square_nine_text").html("");
     $("#endBtn").css("display", "none");
     $(".modal_text").html("");
+    mod.style.display = "none";
 });
 
 $("#playAgainBtn").click(function () {
