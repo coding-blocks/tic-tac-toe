@@ -1,5 +1,6 @@
 function multiPlay(row, col) {
-  if (checkLegalMove(row, col) == true) {
+  var legalMove=checkLegalMove(row, col);
+  if (legalMove) {
     if (player == 1) {
       playTurn(row, col);
       if (checkWin(1) == true) {

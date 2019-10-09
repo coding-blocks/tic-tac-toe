@@ -16,7 +16,7 @@ function randomAITurn () {
     while (flag) {
       xrow= Math.floor(Math.random()*3);
       xcol= Math.floor(Math.random()*3);
-      if (checkLegalMove(xrow, xcol) == true) {
+	if (checkLegalMove(xrow, xcol, true) == true) {
         flag=0;
         playTurn(xrow, xcol);
         if (checkWin() == true)
