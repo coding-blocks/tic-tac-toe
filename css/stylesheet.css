@@ -15,9 +15,9 @@ td {
   text-align: center;
   font-family: 'Roboto', sans-serif;
   color: white;
-  font-size: 50px;
+  font-size: 60px;
   text-align: center;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .text {
@@ -30,7 +30,7 @@ td {
 }
 
 td:hover {
-  opacity: 0.4;
+  opacity: 0.5;
 }
 
 .controls{
@@ -133,7 +133,7 @@ table {
 
 body {
   padding-top: 100px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 15px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 
