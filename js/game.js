@@ -73,12 +73,14 @@ function checkWin() {
     return false;
 }
 
-function checkLegalMove(row, col) {
+function checkLegalMove(row, col, AI=false) {
     console.log(grid[row][col]);
+    
     if (grid[row][col] == "")
         return 1;
     else {
-        alert("Invalid Move!");
+        if (! AI)
+            alert("Invalid Move! ["+[row,col]+"]");
         return 0;
     }
 }
