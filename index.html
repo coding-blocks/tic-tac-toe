@@ -3,12 +3,13 @@
 <head>
   <title>Tic Tac Toe</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <link href="css/stylesheet.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
   <script src="ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 </head>
 
@@ -114,6 +115,21 @@
         <p class="modal_text"></p>
         <btn id="playAgainBtn" class="btn btn-filled btn-sm hoverlight">Play again?</btn>
         <btn class="btn btn-filled btn-sm hoverlight endBtn">End Game</btn>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="invalidMove" class="modal animated fadeIn" role="dialog">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Invalid Move</h2>
+      </div>
+      <div class="modal-body">
+        <p class="modal_text">
+          A move has already been played in the field specified
+        </p>
       </div>
     </div>
   </div>
