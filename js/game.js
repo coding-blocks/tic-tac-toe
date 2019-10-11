@@ -79,7 +79,7 @@ function checkLegalMove(row, col) {
         return 1;
     else {
         // alert("Invalid Move!");
-        console.log($('#invalidMove').modal('show'))
+        $('#invalidMove').modal('show')
         return 0;
     }
 }
