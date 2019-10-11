@@ -78,7 +78,8 @@ function checkLegalMove(row, col) {
     if (grid[row][col] == "")
         return 1;
     else {
-        alert("Invalid Move!");
+        // alert("Invalid Move!");
+        console.log($('#invalidMove').modal('show'))
         return 0;
     }
 }
