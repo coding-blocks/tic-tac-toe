@@ -6,6 +6,7 @@ var player = 1;
 var gameWon = 0;
 var firstplay = 1;
 var GameMode = 0;
+var isPlayerStart;
 var mod = document.getElementById('myModal');
 var opt = document.getElementById('options');
 var turn = document.getElementById('playerTurn');
@@ -85,9 +86,11 @@ function checkLegalMove(row, col) {
 
 $("#setPlayerTurnOne").click(function () {
     turn.style.display = "none";
+	isPlayerStart = true;
 });
 $("#setPlayerTurnTwo").click(function () {
     turn.style.display = "none";
+	isPlayerStart = false;
     if (GameMode == 1)
         randomAITurn();
     else {
@@ -110,7 +113,7 @@ $("#setOptionChal").click(function () {
 });
 
 $(".endBtn").click(function () {
-
+	console.log("Game Terminated");
     initializeGrid();
     player = 1;
     gameWon = 0;
@@ -133,14 +136,13 @@ $(".endBtn").click(function () {
 });
 
 $("#playAgainBtn").click(function () {
-    initializeGrid();
-    player = 1;
-    gameWon = 0;
-    firstplay = 1;
-    GameMode = 0;
-    turnCount = 0;
-    $("#start").html("Start");
-    $("#square_one_text").html("");
+	console.log("playAgain invoked");
+	//same execution
+	initializeGrid();
+	gameWon = 0;
+	turnCount = 0;
+	player = 1;
+	$("#square_one_text").html("");
     $("#square_two_text").html("");
     $("#square_three_text").html("");
     $("#square_four_text").html("");
@@ -151,6 +153,18 @@ $("#playAgainBtn").click(function () {
     $("#square_nine_text").html("");
     mod.style.display = "none";
     $(".modal_text").html("");
+	
+	//difference in execution    	          
+	firstplay = 0;
+	
+	if(!isPlayerStart){
+		if (GameMode == 1){randomAITurn();}
+		else {chalAITurn();}
+	}
+	
+    //GameMode = 0;    
+    //$("#start").html("Start");
+    
 });
 
 function playTurn(row, col) {
