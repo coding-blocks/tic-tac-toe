@@ -111,6 +111,25 @@ $("#setOptionChal").click(function () {
 
 $(".endBtn").click(function () {
 
+    document.getElementById('square_one').style.backgroundColor = "white";
+    document.getElementById('square_one').style.opacity=0.2;
+    document.getElementById('square_two').style.backgroundColor = "white";
+    document.getElementById('square_two').style.opacity=0.2;
+    document.getElementById('square_three').style.backgroundColor = "white";
+    document.getElementById('square_three').style.opacity=0.2;
+    document.getElementById('square_four').style.backgroundColor = "white";
+    document.getElementById('square_four').style.opacity=0.2;
+    document.getElementById('square_five').style.backgroundColor = "white";
+    document.getElementById('square_five').style.opacity=0.2;
+    document.getElementById('square_six').style.backgroundColor = "white";
+    document.getElementById('square_six').style.opacity=0.2;
+    document.getElementById('square_seven').style.backgroundColor = "white";
+    document.getElementById('square_seven').style.opacity=0.2;
+    document.getElementById('square_eight').style.backgroundColor = "white";
+    document.getElementById('square_eight').style.opacity=0.2;
+    document.getElementById('square_nine').style.backgroundColor = "white";
+    document.getElementById('square_nine').style.opacity=0.2;
+
     initializeGrid();
     player = 1;
     gameWon = 0;
@@ -160,27 +179,39 @@ function playTurn(row, col) {
                 case 0:
                     if (player == 1) {
                         $("#square_one_text").html("X");
+                        document.getElementById('square_one').style.backgroundColor = "green";
+                        document.getElementById('square_one').style.opacity=1;
                         grid[0][0] = 'X';
                     } else {
                         $("#square_one_text").html("O");
+                        document.getElementById('square_one').style.backgroundColor = "orange";
+                        document.getElementById('square_one').style.opacity=1;
                         grid[0][0] = 'O';
                     }
                     break;
                 case 1:
                     if (player == 1) {
                         $("#square_two_text").html("X");
+                        document.getElementById('square_two').style.backgroundColor = "green";
+                        document.getElementById('square_two').style.opacity=1;
                         grid[0][1] = 'X';
                     } else {
                         $("#square_two_text").html("O");
+                        document.getElementById('square_two').style.backgroundColor = "orange";
+                        document.getElementById('square_two').style.opacity=1;
                         grid[0][1] = 'O';
                     }
                     break;
                 case 2:
                     if (player == 1) {
                         $("#square_three_text").html("X");
+                        document.getElementById('square_three').style.backgroundColor = "green";
+                        document.getElementById('square_three').style.opacity=1;
                         grid[0][2] = 'X';
                     } else {
                         $("#square_three_text").html("O");
+                        document.getElementById('square_three').style.backgroundColor = "orange";
+                        document.getElementById('square_three').style.opacity=1;
                         grid[0][2] = 'O';
                     }
                     break;
@@ -191,27 +222,39 @@ function playTurn(row, col) {
                 case 0:
                     if (player == 1) {
                         $("#square_four_text").html("X");
+                        document.getElementById('square_four').style.backgroundColor = "green";
+                        document.getElementById('square_four').style.opacity=1;
                         grid[1][0] = 'X';
                     } else {
                         $("#square_four_text").html("O");
+                        document.getElementById('square_four').style.backgroundColor = "orange";
+                        document.getElementById('square_four').style.opacity=1;
                         grid[1][0] = 'O';
                     }
                     break;
                 case 1:
                     if (player == 1) {
                         $("#square_five_text").html("X");
+                        document.getElementById('square_five').style.backgroundColor = "green";
+                        document.getElementById('square_five').style.opacity=1;
                         grid[1][1] = 'X';
                     } else {
                         $("#square_five_text").html("O");
+                        document.getElementById('square_five').style.backgroundColor = "orange";
+                        document.getElementById('square_five').style.opacity=1;
                         grid[1][1] = 'O';
                     }
                     break;
                 case 2:
                     if (player == 1) {
                         $("#square_six_text").html("X");
+                        document.getElementById('square_six').style.backgroundColor = "green";
+                        document.getElementById('square_six').style.opacity=1;
                         grid[1][2] = 'X';
                     } else {
                         $("#square_six_text").html("O");
+                        document.getElementById('square_six').style.backgroundColor = "orange";
+                        document.getElementById('square_six').style.opacity=1;
                         grid[1][2] = 'O';
                     }
                     break;
@@ -222,27 +265,39 @@ function playTurn(row, col) {
                 case 0:
                     if (player == 1) {
                         $("#square_seven_text").html("X");
+                        document.getElementById('square_seven').style.backgroundColor = "green";
+                        document.getElementById('square_seven').style.opacity=1;
                         grid[2][0] = 'X';
                     } else {
                         $("#square_seven_text").html("O");
+                        document.getElementById('square_seven').style.backgroundColor = "orange";
+                        document.getElementById('square_seven').style.opacity=1;
                         grid[2][0] = 'O';
                     }
                     break;
                 case 1:
                     if (player == 1) {
                         $("#square_eight_text").html("X");
+                        document.getElementById('square_eight').style.backgroundColor = "green";
+                        document.getElementById('square_eight').style.opacity=1;
                         grid[2][1] = 'X';
                     } else {
                         $("#square_eight_text").html("O");
+                        document.getElementById('square_eight').style.backgroundColor = "orange";
+                        document.getElementById('square_eight').style.opacity=1;
                         grid[2][1] = 'O';
                     }
                     break;
                 case 2:
                     if (player == 1) {
                         $("#square_nine_text").html("X");
+                        document.getElementById('square_nine').style.backgroundColor = "green";
+                        document.getElementById('square_nine').style.opacity=1;
                         grid[2][2] = 'X';
                     } else {
                         $("#square_nine_text").html("O");
+                        document.getElementById('square_nine').style.backgroundColor = "orange";
+                        document.getElementById('square_nine').style.opacity=1;
                         grid[2][2] = 'O';
                     }
                     break;
