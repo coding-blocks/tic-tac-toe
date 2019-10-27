@@ -74,6 +74,14 @@ function checkWin() {
 }
 
 function checkLegalMove(row, col) {
+    if (typeof row !== 'number' || typeof col !== 'number') {
+        alert("The return values must be numbers");
+        return 0;
+    }
+    if (row < 0 || row >= grid.length || col < 0 || col >= grid[0].length) {
+        alert("Invalid Move! (Impossible Position)");
+        return 0;
+    }
     console.log(grid[row][col]);
     if (grid[row][col] == "")
         return 1;
