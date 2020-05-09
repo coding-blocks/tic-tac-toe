@@ -1,12 +1,4 @@
-<svg
-  width="800" height="600"
-  xmlns="http://www.w3.org/2000/svg"
-  onload="StartAnimation(evt)">
-
-  <title>Test Tube Progress Bar</title>
-  <desc>Created for the Web Directions SVG competition</desc>
-
-  <script type="text/ecmascript"><![CDATA[
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" onload="StartAnimation(evt)"><title>Test Tube Progress Bar</title><desc>Created for the Web Directions SVG competition</desc><script type="text/ecmascript"><![CDATA[
     var timevalue = 0;
     var timer_increment = 1;
     var max_time = 100;
@@ -47,37 +39,4 @@
         setTimeout("ShowAndGrowElement()", timer_increment)
     }
     window.ShowAndGrowElement = ShowAndGrowElement
-  ]]></script>
-
-  <rect
-    fill="#2e3436"
-    fill-rule="nonzero"
-    stroke-width="3"
-    y="0"
-    x="0"
-    height="600"
-    width="800"
-    id="rect3590"/>
-
-    <text
-       style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
-       x="50"
-       y="350"
-       id="hickory"
-       display="none">
-        Hickory,</text>
-    <text
-       style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
-       x="50"
-       y="350"
-       id="dickory"
-       display="none">
-        dickory,</text>
-    <text
-       style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
-       x="50"
-       y="350"
-       id="dock"
-       display="none">
-        dock!</text>
-</svg>
+  ]]></script><rect id="rect3590" width="800" height="600" x="0" y="0" fill="#2e3436" fill-rule="nonzero" stroke-width="3"/><text style="font-size:144px;font-style:normal;font-variant:normal;font-weight:700;font-stretch:normal;fill:#000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold" id="hickory" x="50" y="350" display="none">Hickory,</text><text style="font-size:144px;font-style:normal;font-variant:normal;font-weight:700;font-stretch:normal;fill:#000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold" id="dickory" x="50" y="350" display="none">dickory,</text><text style="font-size:144px;font-style:normal;font-variant:normal;font-weight:700;font-stretch:normal;fill:#000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold" id="dock" x="50" y="350" display="none">dock!</text></svg>
