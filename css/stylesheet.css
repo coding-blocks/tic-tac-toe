@@ -158,6 +158,17 @@ nav {
   -webkit-backface-visibility: hidden;
   max-width: 100%;
 }
+.navbar-div-flex
+{
+  margin-left:20px;display: flex; flex-direction: row; justify-content: flex-start;align-items: center;
+}
+.navbar-img
+{
+  max-height: 64px; margin-right: 10px;
+}
+nav h2{
+  margin-left: 10px;text-transform: uppercase; margin-bottom:0 !important;color: white; font-size: 20px;font-weight: 500;
+}
 
 nav ul {
   margin-bottom: 0;
