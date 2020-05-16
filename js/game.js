@@ -110,7 +110,6 @@ $("#setOptionChal").click(function () {
 });
 
 $(".endBtn").click(function () {
-
     initializeGrid();
     player = 1;
     gameWon = 0;
@@ -132,14 +131,7 @@ $(".endBtn").click(function () {
     mod.style.display = "none";
 });
 
-$("#playAgainBtn").click(function () {
-    initializeGrid();
-    player = 1;
-    gameWon = 0;
-    firstplay = 1;
-    GameMode = 0;
-    turnCount = 0;
-    $("#start").html("Start");
+function resetHTML(){
     $("#square_one_text").html("");
     $("#square_two_text").html("");
     $("#square_three_text").html("");
@@ -149,8 +141,25 @@ $("#playAgainBtn").click(function () {
     $("#square_seven_text").html("");
     $("#square_eight_text").html("");
     $("#square_nine_text").html("");
-    mod.style.display = "none";
     $(".modal_text").html("");
+    mod.style.display = "none";
+}
+
+$("#playAgainBtn").click(function () {
+    initializeGrid();
+    gameWon = 0;
+    GameMode = 0;
+    turnCount = 0;
+    resetHTML();
+    if (GameMode == 0){
+        multiPlay(row, col);
+    }
+    else if (GameMode == 1){
+        randomPlay(row, col);
+    }
+    else if (GameMode == 2){
+        chalPlay(row, col);
+    }
 });
 
 function playTurn(row, col) {
