@@ -110,7 +110,13 @@ $("#setOptionChal").click(function () {
 });
 
 $(".endBtn").click(function () {
+    clear_table();
+});
 
+$("#playAgainBtn").click(function () {
+    clear_table();
+});
+function clear_table(){
     initializeGrid();
     player = 1;
     gameWon = 0;
@@ -130,28 +136,7 @@ $(".endBtn").click(function () {
     $("#endBtn").css("display", "none");
     $(".modal_text").html("");
     mod.style.display = "none";
-});
-
-$("#playAgainBtn").click(function () {
-    initializeGrid();
-    player = 1;
-    gameWon = 0;
-    firstplay = 1;
-    GameMode = 0;
-    turnCount = 0;
-    $("#start").html("Start");
-    $("#square_one_text").html("");
-    $("#square_two_text").html("");
-    $("#square_three_text").html("");
-    $("#square_four_text").html("");
-    $("#square_five_text").html("");
-    $("#square_six_text").html("");
-    $("#square_seven_text").html("");
-    $("#square_eight_text").html("");
-    $("#square_nine_text").html("");
-    mod.style.display = "none";
-    $(".modal_text").html("");
-});
+}
 
 function playTurn(row, col) {
     switch (row) {

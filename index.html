@@ -69,15 +69,19 @@
     </div>
     <div class="col-sm-4 col-xs-12">
       <div id="editor" class="hover-light" style="display: none;">
-        function getRow(){
-          //Complete this
-          return 0;
-        }
-        function getCol(){
-          //Complete this
-          return 0;
-        }
-        play(getRow(),getCol());
+        <script>
+        
+          function getRow(){
+            var row = window.prompt("Enter your row Number : ","0");
+            return  parseInt(row)-1;
+;
+          }
+          function getCol(){
+             var col = window.prompt("Enter your col Number : ","0");
+             return  parseInt(col)-1;
+          }
+          play(getRow(),getCol());
+      </script>
       </div>
     </div>
   </div>
