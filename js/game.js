@@ -151,6 +151,7 @@ $("#playAgainBtn").click(function () {
     $("#square_nine_text").html("");
     mod.style.display = "none";
     $(".modal_text").html("");
+    window.location.reload();
 });
 
 function playTurn(row, col) {
