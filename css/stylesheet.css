@@ -6,6 +6,10 @@ body,html{
   height: 100%;
 }
 
+.logo{
+  padding-top: 15;
+}
+
 td {
   background-color: white;
   border-radius: 25%;
